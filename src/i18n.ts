@@ -10,7 +10,7 @@ import ruRaw from './locales/ru.json';
 import trRaw from './locales/tr.json';
 import ptPTRaw from './locales/pt-PT.json';
 import ptBRRaw from './locales/pt-BR.json';
-import zhTWRaw from './locales/zh-TW.json';
+import zhTWRaw from './locales/zh-TW.original.json';
 import zhCNRaw from './locales/zh-CN.json';
 import { detectBrowserLanguageCodes } from './helpers/subtitles/languages.ts';
 
