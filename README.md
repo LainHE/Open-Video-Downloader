@@ -3,34 +3,36 @@
 # Open Video Downloader (youtube-dl-gui) <br> ![version badge](https://img.shields.io/github/v/release/jely2002/youtube-dl-gui?label=latest-release) ![GitHub](https://img.shields.io/github/license/jely2002/youtube-dl-gui) ![downloads](https://img.shields.io/github/downloads/jely2002/youtube-dl-gui/total) 
 [https://jely2002.github.io/youtube-dl-gui](https://jely2002.github.io/youtube-dl-gui)
 
-Open Video Downloader is a simple, cross-platform desktop application that lets you download videos, audio, subtitles and metadata from hundreds of supported websites, not just YouTube.  
-It provides an easy-to-use interface around [yt-dlp](https://github.com/yt-dlp/yt-dlp) so you don’t have to touch the command line.
+> [English version](./README.en.md) | 简体中文
+
+Open Video Downloader 是一款简洁的跨平台桌面应用，支持从数百个网站下载视频、音频、字幕和元数据，不仅限于 YouTube。  
+它基于 [yt-dlp](https://github.com/yt-dlp/yt-dlp) 提供了易用的图形界面，无需触碰命令行。
 
 
-## Features
+## 功能特性
 
-- **Cross-platform:** works on Windows, macOS and Linux.
-- **Audio or video downloads:** grab full videos or extract only the audio track.
-- **Subtitles and metadata:** automatically saves available captions and video information.
-- **Quality control:** choose your preferred resolution, frame rate, and output format like MP4 or MKV.
-- **Playlists:** download entire playlists in one go.
-- **Custom output:** set your download location and control filenames using presets or custom templates.
-- **Smart queueing:** OVD balances multiple downloads automatically so your computer doesn’t slow down.
-- **Authentication:** supports browser cookie files, basic auth and video passwords.
-- **Automatic updates:** both the app and yt-dlp are kept up to date automatically.
-- **Light and dark mode:** adapts to your system theme with clear progress and error handling.
-- **Shortcuts:** queue and download videos using shortcuts, stay up-to-date on progress with notifications.
+- **跨平台：** 支持 Windows、macOS 和 Linux。
+- **音频或视频下载：** 下载完整视频或仅提取音轨。
+- **字幕和元数据：** 自动保存可用的字幕和视频信息。
+- **画质控制：** 选择你偏好的分辨率、帧率和输出格式（如 MP4 或 MKV）。
+- **播放列表：** 一键下载整个播放列表。
+- **自定义输出：** 设置下载位置，使用预设或自定义模板控制文件名。
+- **智能队列：** OVD 自动平衡多个下载任务，避免电脑变慢。
+- **身份验证：** 支持浏览器 Cookie 文件、基本认证和视频密码。
+- **自动更新：** 应用和 yt-dlp 均会自动更新到最新版本。
+- **明暗模式：** 跟随系统主题，进度和错误提示清晰可见。
+- **快捷键：** 使用快捷键排队和下载视频，通过通知随时掌握进度。
 
-## Download
+## 下载
 
-The latest versions for **Windows**, **macOS** and **Linux** are available on the  
-[GitHub Releases page](https://github.com/jely2002/youtube-dl-gui/releases).
+**Windows**、**macOS** 和 **Linux** 的最新版本可在  
+[GitHub Releases 页面](https://github.com/LainHE/Open-Video-Downloader/releases)获取。
 
-Download the installer or archive for your platform and follow the normal installation steps.  
-No command-line setup is required.
+下载对应平台的安装包或压缩包，按常规步骤安装即可。  
+无需命令行配置。
 
-#### What file do I download?
-| Your Computer                         | Download                                       |
+#### 我该下载哪个文件？
+| 你的系统                         | 下载文件                                       |
 |---------------------------------------|------------------------------------------------|
 | **Windows**                           | `Open.Video.Downloader_x.x.x_x64-setup.exe`    |
 | **Mac (Intel)**                       | `Open.Video.Downloader_x.x.x_x64.dmg`          |
@@ -42,8 +44,8 @@ No command-line setup is required.
 | **Linux Fedora/RHEL (x64)**           | `Open.Video.Downloader_x.x.x-x_amd64.rpm`      |
 | **Linux Fedora/RHEL (aarch64)**       | `Open.Video.Downloader_x.x.x-x_aarch64.rpm`    |
 
-#### Download using the command line
-Open Video Downloader can be downloaded using command line tools like [Homebrew](https://brew.sh/) on Mac or [WinGet](https://github.com/microsoft/winget-cli) on Windows.
+#### 命令行下载
+Open Video Downloader 可通过命令行工具下载，如 Mac 上的 [Homebrew](https://brew.sh/) 或 Windows 上的 [WinGet](https://github.com/microsoft/winget-cli)。
 
 ```shell
 brew install --cask open-video-downloader
@@ -53,42 +55,34 @@ brew install --cask open-video-downloader
 winget install -e --id jely2002.youtube-dl-gui
 ```
 
-#### Download from the Microsoft Store
-Open Video Downloader is available on the Microsoft Store, although we recommend using the GitHub releases download instead.
-This is due to updates taking longer to arrive and auto-updating yt-dlp is also not supported.
+## 工作原理
 
-<a href="https://apps.microsoft.com/detail/9p53s4t9znj5?referrer=appbadge&cid=gh-readme&mode=full" target="_blank"  rel="noopener noreferrer">
-	<img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="OVD download badge for Microsoft Store"/>
-</a>
+Open Video Downloader 前端基于 Vue 3 构建，后端由 [Tauri](https://tauri.app/) 驱动的 Rust 提供动力。  
+添加视频或播放列表后，应用会与 yt-dlp 通信以获取信息、处理选项并启动下载。  
+下载进度和任何错误都会在应用中显示。
 
-## How it works
+## 本地化
 
-Open Video Downloader uses a front-end built with Vue 3 and a Rust backend powered by [Tauri](https://tauri.app/).  
-When you add a video or playlist, the app communicates with yt-dlp to fetch information, process options and start the download.  
-The download progress and any errors are displayed in the app.
+简体中文（zh-CN）与繁体中文（zh-TW）和英文同时可用。  
+原始 `zh-TW` 语言文件位于 [src/locales/zh-TW.original.json](./src/locales/zh-TW.original.json)。
 
-## Localization
+## 贡献指南
 
-Chinese Simplified (zh-CN) is available alongside Traditional Chinese (zh-TW) and English.  
-The original `zh-TW` locale file can be found at [src/locales/zh-TW.original.json](./src/locales/zh-TW.original.json).
-
-## Contributing
-
-Developers are welcome to contribute.  
-You’ll need Node.js (v24+) and Rust installed.
+欢迎开发者参与贡献。  
+你需要安装 Node.js（v24+）和 Rust。
 
 ```
 npm install
 npm run tauri dev
 ```
 
-For more details, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+更多详情，请参阅 [CONTRIBUTING.md](./CONTRIBUTING.md)。
 
-## License and disclaimer
+## 许可证与免责声明
 
-Open Video Downloader is distributed under the [AGPL-3.0 license](./LICENSE).
+Open Video Downloader 在 [AGPL-3.0 许可证](./LICENSE)下分发。
 
-#### Use this application responsibly
-The maintainers of Open Video Downloader cannot be held liable for misuse of this application, as stated in the AGPL-3.0 license (section 16).  
-We do not condone the use of this software to violate local laws or platform terms of service (including the DMCA).  
-Users are personally responsible for ensuring they use this software fairly and within legal boundaries.
+#### 负责任地使用本应用
+正如 AGPL-3.0 许可证第 16 条所述，Open Video Downloader 的维护者不对本应用的滥用承担责任。  
+我们不鼓励使用此软件违反当地法律或平台服务条款（包括 DMCA）。  
+用户需自行确保公平合法地使用本软件。
