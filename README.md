@@ -67,6 +67,11 @@ Open Video Downloader uses a front-end built with Vue 3 and a Rust backend power
 When you add a video or playlist, the app communicates with yt-dlp to fetch information, process options and start the download.  
 The download progress and any errors are displayed in the app.
 
+## Localization
+
+Chinese Simplified (zh-CN) is available alongside Traditional Chinese (zh-TW) and English.  
+The original `zh-TW` locale file can be found at [src/locales/zh-TW.original.json](./src/locales/zh-TW.original.json).
+
 ## Contributing
 
 Developers are welcome to contribute.  

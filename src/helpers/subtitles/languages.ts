@@ -12,6 +12,7 @@ const expandedCodes: Record<string, SubtitleLanguageOption> = {
   'pt-PT': { code: 'pt-PT', englishName: 'Portuguese (Portugal)', nativeName: 'Português (Portugal)' },
   'pt-BR': { code: 'pt-BR', englishName: 'Portuguese (Brazil)', nativeName: 'Português (Brasil)' },
   'zh-TW': { code: 'zh-TW', englishName: 'Traditional Chinese (Taiwan)', nativeName: '繁體中文（台灣）' },
+  'zh-CN': { code: 'zh-CN', englishName: 'Simplified Chinese (Mainland China)', nativeName: '简体中文（中国）' },
 };
 
 export const languageOptions: SubtitleLanguageOption[] = [...codes, ...Object.keys(expandedCodes)]
